@@ -30,7 +30,7 @@ function LandingPage() {
 
             <Route path={`/register`} element={<Register/>}/>
             <Route path={`/dashboard`} element={<Dashboard/>}/>
-            <Route path={`/blog`} element={<AddBlog/>}/>
+            <Route path={`/blogs`} element={<AddBlog/>}/>
             <Route path={`/blog/:id`} element={<BlogDetail/>}/>
           </Routes>
         </Router>

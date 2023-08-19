@@ -1,7 +1,7 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const baseUrl="https://backend-u775.onrender.com"
+const baseUrl="https://blog-w1zp.onrender.com"
 
 
 const initialState={

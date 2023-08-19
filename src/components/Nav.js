@@ -24,7 +24,7 @@ const handleLogout=()=>{
        
         <ul className='md:flex md:items-center'>
             <li className='md:ml-8 p-1'><a href={`/dashboard`} className='text-gray-800 hover:text-gray-400'>DASHBOARD</a></li>
-            <li className='md:ml-8 p-1'><a href={`/blog`} className='text-gray-800 hover:text-gray-400'>CREATE BLOG</a></li>
+            <li className='md:ml-8 p-1'><a href={`/blogs`} className='text-gray-800 hover:text-gray-400'>CREATE BLOG</a></li>
             <li className='md:ml-8 p-1'><a href={`/`} className='text-gray-800 hover:text-gray-400'>logIn:{user?.user?.extUser?.name}</a></li>
             <li className='md:ml-8 p-1'><a href={`/`} className='text-gray-800 hover:text-gray-400' onClick={handleLogout}>LOGOUT</a></li>
 

@@ -5,7 +5,7 @@ import axios from 'axios'
 
 // const user = JSON.parse(localStorage.getItem('users'))
 
-const baseUrl="https://backend-u775.onrender.com"
+const baseUrl="https://blog-w1zp.onrender.com"
 
 const initialState={
     user:null,
