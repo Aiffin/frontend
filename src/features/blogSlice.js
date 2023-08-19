@@ -1,6 +1,9 @@
 import { createSlice,createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
+const baseUrl="https://backend-u775.onrender.com"
+
+
 const initialState={
     blog:{},
     blogs:[],
@@ -23,7 +26,7 @@ export const blogPost=createAsyncThunk(`blog/create`,async(blogData)=>{
                 "Content-type":"multipart/form-data"
             }
         }
-        const res=await axios.post(`/api/createBlog`,blogData,{config})
+        const res=await axios.post(`${baseUrl}/api/createBlog`,blogData,{config})
         //console.log(res.data)
         return res.data
     } catch (error) {
@@ -33,7 +36,7 @@ export const blogPost=createAsyncThunk(`blog/create`,async(blogData)=>{
 
 export const blogGet=createAsyncThunk(`blog/All`,async()=>{
     try {
-        const res=await axios.get(`/api/blogs`)
+        const res=await axios.get(`${baseUrl}/api/blogs`)
         //console.log(res.data)
         return res.data
     } catch (error) {
@@ -43,7 +46,7 @@ export const blogGet=createAsyncThunk(`blog/All`,async()=>{
 
 export const blogLike=createAsyncThunk(`blog/like`,async(id)=>{
     try {
-        const res=await axios.get(`/api/likeBlog/${id}`)
+        const res=await axios.get(`${baseUrl}/api/likeBlog/${id}`)
         //console.log(res.data)
         return res.data
     } catch (error) {
@@ -53,7 +56,7 @@ export const blogLike=createAsyncThunk(`blog/like`,async(id)=>{
 
 export const blogDetails=createAsyncThunk(`blog/single`,async(id)=>{
     try {
-        const res=await axios.get(`/api/blog/${id}`)
+        const res=await axios.get(`${baseUrl}/api/blog/${id}`)
         //console.log(res.data)
         return res.data
     } catch (error) {

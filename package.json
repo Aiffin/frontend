@@ -43,6 +43,5 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.2"
-  },
-  "proxy": "https://backend-u775.onrender.com"
+  }
 }

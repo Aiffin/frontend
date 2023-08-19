@@ -5,6 +5,8 @@ import axios from 'axios'
 
 // const user = JSON.parse(localStorage.getItem('users'))
 
+const baseUrl="https://backend-u775.onrender.com"
+
 const initialState={
     user:null,
     error:false,
@@ -14,7 +16,7 @@ const initialState={
 
 export const signUp=createAsyncThunk('user/register',async(userCredentials)=>{
     try {
-        const res= await axios.post(`/api/signup`,userCredentials)
+        const res= await axios.post(`${baseUrl}/api/signup`,userCredentials)
         //console.log(res.data)
 
         // if(res.data){
@@ -30,7 +32,7 @@ export const signUp=createAsyncThunk('user/register',async(userCredentials)=>{
 
 export const loginUser=createAsyncThunk("user/login",async(userCredentials)=>{
     try {
-        const request=await axios.post(`/api/login`,userCredentials)
+        const request=await axios.post(`${baseUrl}/api/login`,userCredentials)
         const response=await request.data;
         localStorage.setItem('users',JSON.stringify(response))
         return response
